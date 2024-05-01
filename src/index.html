@@ -27,8 +27,8 @@
             <h1 class="font-bold bg-blue-100 px-2 rounded-md">CONSEJOS/TIPS</h1>
             
             <div class="pt-2">
-                <h1><span class="font-bold">Lee mucho:</span> La lectura es una de las mejores maneras de mejorar tu vocabulario, gramática y estilo. Lee una variedad de géneros y autores para expandir tu conocimiento y desarrollar tu propio estilo.</h1>
-                <h1><span class="font-bold">Practica la escritura regularmente:</span> Escribe todos los días, ya sea un diario, un blog, historias cortas o simplemente comentarios sobre lo que has leído. La práctica constante te ayudará a mejorar tu fluidez y claridad.</h1>
+                <h1 id="consejo1"></h1>
+                <h1 id="consejo2"></h1>
             </div>
 
         </div>
@@ -39,31 +39,58 @@
                 <h1 class="font-bold bg-blue-100 px-2 rounded-md">RECOMENDACIONES DE LIBROS</h1>
 
                 <div class="flex mt-4 justify-center items-center gap-8 text-center">
-                    <div class="w-[150px] cursor-pointer">
-                        <img src="https://edit.org/img/blog/yrm-1024-plantillas-ebook-gratis-editables-online.webp" alt="">
-                        <h1>El Laberinto de los Susurros</h1>
-                    </div>
-                    <div class="w-[150px] cursor-pointer">
-                        <img src="https://edit.org/img/blog/yrm-1024-plantillas-ebook-gratis-editables-online.webp" alt="">
-                        <h1>El Laberinto de los Susurros</h1>
-                    </div>
-                    <div class="w-[150px] cursor-pointer">                    
-                        <img src="https://edit.org/img/blog/yrm-1024-plantillas-ebook-gratis-editables-online.webp" alt="">
-                        <h1>El Laberinto de los Susurros</h1>
-                    </div>
+                    <a href="https://www.amazon.com/-/es/Athur-Conan-Doyle/dp/1802792546" class="w-[150px] cursor-pointer">
+                        <img src="https://m.media-amazon.com/images/I/91XHDtSt7qL._AC_UF1000,1000_QL80_DpWeblab_.jpg" alt="">
+                        <h1>El completo Sherlock Holmes</h1>
+                    </a>
+                    <a href="https://editorialverbum.es/producto/el-viejo-y-el-mar/" class="w-[150px] cursor-pointer">
+                        <img src="https://editorialverbum.es/wp-content/uploads/2019/05/El-viejo-y-el-mar.jpg" alt="">
+                        <h1>El viejo y el mar</h1>
+                    </a>
+                    <a href="https://hablamosdelibros.es/producto/el-conde-de-montecristo-2/" class="w-[150px] cursor-pointer">                    
+                        <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/e6/8c/e68c2b03eeeaa8cb4493f8803d784642.jpg" alt="">
+                        <h1>El conde de Montecristo</h1>
+                    </a>
                 </div>
             </div>
 
             <div>
-                <h1 class="font-bold bg-blue-100 px-2 rounded-md">INFORMACIÓN ESTADISTICA</h1>
-
-                <div class="cursor-pointer mt-4 grid items-center justify-center text-center">
-                    (Cuadro/Diagrama/Figura ESTADISTICA)
-                </div>
+                <h1 class="font-bold bg-blue-100 px-2 rounded-md">INFORMACIÓN ESTADISTICA</h1>               
+                <canvas id="myChart"></canvas>
             </div>
         </div>
 
     </section>
+
+    <script src="main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<! -- Grafica -->
+<script>
+  const canva = document.getElementById('myChart');
+
+  new Chart(canva, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+ 
 
 </body>
 </html>
