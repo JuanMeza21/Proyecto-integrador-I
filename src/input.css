@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Estilo básico para el Slider*/
+#gallery {
+  overflow: hidden;
+}
+
+.gallery-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.descripcion h1 {
+  font-style: italic;
+  font-size: larger;
+  font-weight: 900;
+}
+
+.descripcion {
+  padding: 10px;
+}
+
+.gallery-item img {
+  width: 150px;
+  display: block;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* Navegación del Slider */
+.gallery-navigation {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.nav-button {
+  background-color: rgb(191 219 254);
+  border: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.nav-button:hover {
+  background-color: rgb(147, 191, 231);
+}

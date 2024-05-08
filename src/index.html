@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./input.css">
     <link rel="icon" href="">
     <title>LinguaBoost</title>
 </head>
@@ -16,7 +17,7 @@
                 <button class="hover:shadow-md hover:bg-blue-100 px-2 hover:rounded-lg"><a href="index.html">Inicio</a></button>
                 <button class="hover:shadow-md hover:bg-blue-100 px-2 hover:rounded-lg"><a href="actividades.html">Actividades</a></button>
                 <button class="hover:shadow-md hover:bg-blue-100 px-2 hover:rounded-lg"><a href="pruebas.html">Pruebas</a></button>
-                <button class="hover:shadow-md hover:bg-blue-100 px-2 hover:rounded-lg"><a href="corrector.html">Corrector linguistico</a></button>
+                <button class="hover:shadow-md hover:bg-blue-100 px-2 hover:rounded-lg"><a href="juegos.html">Juegos</a></button>
             </ul>
         </div>
     </nav>
@@ -38,20 +39,43 @@
             <div>
                 <h1 class="font-bold bg-blue-100 px-2 rounded-md">RECOMENDACIONES DE LIBROS</h1>
 
-                <div class="flex mt-4 justify-center items-center gap-8 text-center">
-                    <a href="https://www.amazon.com/-/es/Athur-Conan-Doyle/dp/1802792546" class="w-[150px] cursor-pointer">
-                        <img src="https://m.media-amazon.com/images/I/91XHDtSt7qL._AC_UF1000,1000_QL80_DpWeblab_.jpg" alt="">
-                        <h1>El completo Sherlock Holmes</h1>
-                    </a>
-                    <a href="https://editorialverbum.es/producto/el-viejo-y-el-mar/" class="w-[150px] cursor-pointer">
-                        <img src="https://editorialverbum.es/wp-content/uploads/2019/05/El-viejo-y-el-mar.jpg" alt="">
-                        <h1>El viejo y el mar</h1>
-                    </a>
-                    <a href="https://hablamosdelibros.es/producto/el-conde-de-montecristo-2/" class="w-[150px] cursor-pointer">                    
-                        <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/e6/8c/e68c2b03eeeaa8cb4493f8803d784642.jpg" alt="">
-                        <h1>El conde de Montecristo</h1>
-                    </a>
+                <div id="gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <img src="https://m.media-amazon.com/images/I/91XHDtSt7qL._AC_UF1000,1000_QL80_DpWeblab_.jpg" alt="">
+                            <div class="descripcion">
+                                <h1>El completo Sherlock Holmes</h1>
+                                <span>Cuando Sir Arthur Conan Doyle presentó al mundo a Sherlock Holmes y al Dr. Watson en 1887 en Estudio en escarlata, nació un verdadero icono de la literatura. Desde entonces, su humilde dirección en el 221B de Baker Street se ha vuelto casi tan famosa como el gran detective en persona, y la increíble popularidad de las aventuras de Sherlock Holmes nunca ha flaqueado en los últimos 130 años.</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://editorialverbum.es/wp-content/uploads/2019/05/El-viejo-y-el-mar.jpg" alt="">
+                            <div class="descripcion">
+                                <h1>El viejo y el mar</h1>
+                                <span>El viejo y el mar (The Old Man and the Sea) es una novela corta escrita por Ernest Hemingway en 1951 en Cabo Blanco y publicada en 1952. Fue su último trabajo de ficción importante publicado en vida y posiblemente su obra más famosa.</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/e6/8c/e68c2b03eeeaa8cb4493f8803d784642.jpg" alt="">
+                            <div class="descripcion">
+                                <h1>El conde de Montecristo</h1>
+                                <span>El conde de Montecristo (en francés, Le comte de Montecristo) es una novela de aventuras clásica de Alejandro Dumas, con la colaboración de Auguste Maquet. Esta obra se suele considerar como el mejor trabajo de Dumas, y a menudo se incluye en las listas de las mejores novelas de todos los tiempos. El libro se terminó de escribir en 1844 y fue publicado en una serie de 18 entregas, como folletín, durante los dos años siguientes.</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/f4/bc/f4bc25288107cfebe6a9cbc1e245c00a.jpg" alt="">
+                            <div class="descripcion">
+                                <h1>El Principito</h1>
+                                <span>La trama sigue a un piloto varado en el desierto del Sahara que se encuentra con el Principito, un niño extraterrestre que viaja por diferentes planetas habitados por personajes simbólicos que representan aspectos de la naturaleza humana y los comportamientos absurdos de los adultos.</span>                            
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <nav class="gallery-navigation">
+                    <button class="nav-button prev-button">ANTERIOR</button>
+                    <button class="nav-button next-button">SIGUIENTE</button>
+                </nav>
             </div>
 
             <div>
@@ -65,7 +89,6 @@
     <script src="main.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 
 <! -- Grafica -->
 <script>
