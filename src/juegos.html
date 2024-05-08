@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/src_juegos/style.css" type="text/css" media="all" />
+        <!-- Dependencias -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
+    <script src="./src_juegos/wordfind.js"></script>
+    <script src="./src_juegos/wordfindgame.js"></script>
     <title>LinguaBoost</title>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 grid">
 
     <nav class="bg-[#FFFFFF] text-black p-4 shadow">
         <div class="container mx-auto flex justify-between items-center">
@@ -23,12 +28,45 @@
     <section>
         <div>
             <h1>SOPA DE LETRAS - PALABRAS NUEVAS</h1>
+            <!-- Estructura de la sopa de letras-->
+            <input type="button" id="BTNresolver" value="Resolver sopa de letras" />
+            <input type="button" value="Reiniciar la sopa de letras" id="BTNrefresh">
+            <div id="contenedor"></div>
+            <div id="palabras-sopadeletras"></div>
         </div>
+    </section>
 
+    <section>
         <div>
             <h1>CRUCIGRAMA - PALABRAS NUEVAS</h1>
         </div>
     </section>
+
+    <!-- Construcción de la sopa de letras -->
+    <script>
+        // Array con las palabras que el usuario debe buscar
+        var palabras = ['efímero', 'quimera', 'paradoja',
+            'efervescencia', 'quirófano', 'lóbrego',
+            'ébano', 'esotérico', 'índigo',
+            'efluvio', 'sibilino', 'furtivo',
+            'arcano', 'gárgola', 'gaznápiro',
+            'pétreo', 'crepúsculo', 'férvido',
+            'lúgubre', 'pérfido', 'quimérico',
+            'séquito', 'espectro', 'brumoso',
+            'clandestino', 'caótico', 'disidente'
+        ];
+
+        // Comienza un juego de palabras
+        var sopaLetras = wordfindgame.create(palabras, '#contenedor', '#palabras-sopadeletras');
+        // Función para resolver la sopa de petras             
+        $("#BTNresolver").click(function () {
+            var resultado = wordfindgame.solve(sopaLetras, palabras);
+        });
+        // Función para reiniciar la sopa de letras
+        $("#BTNrefresh").click(function () {
+            window.location.href = window.location.href;
+        });
+    </script>
 
 </body>
 </html>
